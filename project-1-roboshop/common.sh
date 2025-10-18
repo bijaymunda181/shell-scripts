@@ -16,7 +16,7 @@ func_exit_status() {
 }
 
 func_ppreq() {
-  echo -e "\e[36Create ${component}"
+  echo -e "\e[36Create ${component} \e[0m"
   cp ${component}.service /etc/systemd/system/${component}.service &>>$log
   func_exit_status
 

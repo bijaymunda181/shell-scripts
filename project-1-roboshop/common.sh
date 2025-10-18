@@ -8,9 +8,9 @@ func_exit_status
 
 func_exit_status() {
   if [ $? -eq 0 ]; then
-    echo -e "\e[32m✅ ${component} SUCESS\e[0m"
+    echo -e "\e[32m✅SUCESS\e[0m"
     else
-    echo -e "\e[31m❌ ${component} FALURE\e[0m"
+    echo -e "\e[31m❌FALURE\e[0m"
     exit 10
     fi
 }

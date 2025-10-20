@@ -5,8 +5,8 @@ yum install nginx -y &>>$log
 echo $?
 
 echo -e "\e[36m Starting Nginx\e[0m"
-systmpctl enable nginx &>>$log
-systmpctl start nginx &>>$log
+systemctl enable nginx &>>$log
+systemctl start nginx &>>$log
 echo $?
 
 echo -e "\e[36m Removing Default Nginx Content\e[0m"

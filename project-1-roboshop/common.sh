@@ -1,3 +1,1 @@
-func_exit_status() {
-  echo $""
-}
+log=/tmp/log

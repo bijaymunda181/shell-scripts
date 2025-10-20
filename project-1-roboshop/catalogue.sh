@@ -1,7 +1,7 @@
 component=catalogue
 
+source common.sh
+schema_setup=mongodb
 
-npm install
 
-
-func_systemd
+func_nodejs

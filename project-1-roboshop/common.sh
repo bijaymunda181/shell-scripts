@@ -42,6 +42,9 @@ func_exit_status
 
 cd /app
 
+echo -e "\e[36m Installing Nodejs Dependencies\e[0m
+npm install -y &>>$log
+
 }
 
 func_schema_setup() {

@@ -1,7 +1,6 @@
 component=catalogue
 
 source common.sh
-schema_setup=mongodb
-
+schema_setup=mongod
 
 func_nodejs

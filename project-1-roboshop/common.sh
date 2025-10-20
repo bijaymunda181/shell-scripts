@@ -2,8 +2,8 @@ log=/tmp/roboshop
 
 func_systemd() {
   systemctl demon-reload &>>$log
-  systemctl enable nginx &>>$log
-  systemctl start nginx &>>$log
+  systemctl enable ${component} &>>$log
+  systemctl start ${component} &>>$log
 func_exit_status
 }
 
@@ -11,7 +11,9 @@ func_exit_status
 func_appreq() {
 echo "\e[36m Installing nginx \e[0m"
 yum install nginx -y &>>$log
+func_systemd
 func_exit_status
+
 
 echo "\e[36m Removing Default Nginx content \e[0m"
 rm -rf /usr/share/nginx/html/*

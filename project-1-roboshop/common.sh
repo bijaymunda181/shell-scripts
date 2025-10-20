@@ -27,8 +27,7 @@ func_exit_status
 
 }
 
-func_exit_status
- () {
+func_exit_status () {
   echo $? &>>$log
   if [ $? -eq 0 ]; then
     echo -e "\e[32Succes\e[0m"

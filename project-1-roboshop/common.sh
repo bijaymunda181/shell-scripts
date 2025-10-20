@@ -82,7 +82,7 @@ yum install nodejs -y $>>$log
 func_exit_status
 
 echo -e "\e[36m Create mongodb repo\e[0m"
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>>log
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>>$log
 func_exit_status
 func_schema_setup
 

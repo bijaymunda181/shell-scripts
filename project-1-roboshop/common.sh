@@ -51,7 +51,10 @@ yum install mongodb-org-shell -y $>>$log
 func_exit_status
 
 echo -e "\e[36mLoad User Schema\e[0m"
-
+id roboshop &>>log
+if [ $? -eq 0 ]; then
+  useradd roboshop &>>log
+  func_exit_status
 
 
 if [ "${schema_type}" == "mysql" ]; then
@@ -71,6 +74,12 @@ func_nodejs() {
 echo -e "\e[36m Installing Nodejs \e[0m"
 yum install nodejs -y $>>$log
 func_exit_status
+
+echo -e "\e[36m Create mongodb repo \e[0m"
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>>log
+func_exit_status
+
+
 
 
 }

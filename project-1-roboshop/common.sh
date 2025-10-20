@@ -64,3 +64,4 @@ func_schema_setup() {
    echo -e "\e[36Load User Schema \e[0m"
   mongo --host MONGODB-SERVER-IPADDRESS </app/schema/${component}.js
 func_systemd
+}

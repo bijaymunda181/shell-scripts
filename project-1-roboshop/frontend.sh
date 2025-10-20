@@ -17,4 +17,4 @@ echo $?
 echo -e "\e[36m Unzip Frontend content\e[0m"
 cd /usr/share/nginx/html &>>/tmp/roboshop.log
 unzip /tmp/frontend.zip &>>/tmp/roboshop.log
-echo $? &>>/tmp/roboshop.log
+echo $?

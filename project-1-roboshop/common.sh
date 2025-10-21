@@ -31,7 +31,6 @@ func_schema_setup
 
 func_systemd
 
-
 }
 
 func_appreq() {

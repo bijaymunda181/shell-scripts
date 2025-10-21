@@ -24,7 +24,7 @@ echo -e "\e[36mInstalling Nodejs\e[0m"
 yum install nodejs -y &>>${log}
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>>   Download NodeJS Dependencies   <<<<<<<<<<<<<<<<\e[0m"
-npm install &>>${log}
+npm install -y &>>${log}
 Func_exit_status
 
 func_schema_setup

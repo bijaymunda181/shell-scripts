@@ -6,3 +6,14 @@ greeting() {
 
 }
  greeting
+
+ # you declear var in a main program, you can access in function and vice-versa.
+ # Function have its own varibles
+
+input() {
+  echo First Argument $1
+  echo Second Argument $2
+  echo All Argument $*
+  echo No of Argument $#
+
+}

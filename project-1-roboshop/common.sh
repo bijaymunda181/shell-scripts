@@ -17,7 +17,7 @@ Func_exit_status() {
 }
 
 func_nodejs() {
-  echo-e "\e[36mDownload Nodejs Source File\e[0m"
+  echo -e "\e[36mDownload Nodejs Source File\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log}
 
 echo -e "\e[36mInstalling Nodejs\e[0m"

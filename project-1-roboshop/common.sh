@@ -66,5 +66,5 @@ Func_exit_status
 
   echo -e "\e[36m>>>>>>>>>>  Load User Schema  <<<<<<<<<<\e[0m" | tee -a /tmp/roboshop.log
   mongo --host mongodb.rdevopsb72.online </app/schema/${component}.js &>>${log}
-
+fi
 }

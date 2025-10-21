@@ -1,8 +1,3 @@
-source common.sh
-component=user
-
-
-
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
@@ -14,3 +9,6 @@ cd /app
 npm install
 yum install mongodb-org-shell -y
 mongo --host MONGODB-SERVER-IPADDRESS </app/schema/user.js
+systemctl daemon-reload
+systemctl enable user
+systemctl restart user

@@ -1,7 +1,7 @@
 greeting() {
-  My name is Bijay
-  My sirname is Munda
-  I am from Jharkhand
+ echo My name is Bijay
+ echo My sirname is Munda
+ echo I am from Jharkhand
 
 }
  greeting

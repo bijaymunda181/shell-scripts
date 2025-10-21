@@ -22,6 +22,9 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log}
 
 echo -e "\e[36mInstalling Nodejs\e[0m"
 yum install nodejs -y &>>${log}
+Func_exit_status
+
+func_appreq
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>>   Download NodeJS Dependencies   <<<<<<<<<<<<<<<<\e[0m"
 npm install -y &>>${log}

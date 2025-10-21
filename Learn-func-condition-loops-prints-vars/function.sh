@@ -17,3 +17,5 @@ input() {
   echo No of Argument $#
 
 }
+
+input 123 asd

@@ -1,5 +1,7 @@
+log=/tmp/roboshop.log
+
 func_apppreq() {
-    echo -e "\e[36mCreating Roboshop ${component}\e[0m"
+    echo -e "\e[36mCreating Roboshop user\e[0m"
     useradd roboshop &>>${log}
 
     echo -e "\e[36mRemoving the old content\e[0m"

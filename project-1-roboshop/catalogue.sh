@@ -33,10 +33,11 @@ npm install
 
 echo -e "\e[36Installing Mongodb Client\e[0m"
 yum install mongodb-org-shell -y
+
 echo -e "\e[36mLoad catalogue schema\e[0m"
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongo --host mongodb.rdevopsb72.online </app/schema/catalogue.js
 
 echo -e "\e[36mstarting catalogue servive\e[0m"
-#systemctl daemon-reload
-#systemctl enable catalogue
-#systemctl restart catalogue
+systemctl daemon-reload
+systemctl enable catalogue
+systemctl restart catalogue

@@ -72,7 +72,7 @@ echo -e "\e[36Build ${component} servive\e[0m"
 
 echo -e "\e[36Install MYSQL client\e[0m"
   yum install mysql -y
-  mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/${component}.sql
+  mysql -h mysql.rdevopsb72.online -uroot -pRoboShop@1 < /app/schema/${component}.sql
 
 func_systemd
 }

@@ -31,7 +31,7 @@ cd /app
 echo -e "\e[36mDownload Nodejs Depandences\e[0m"
 npm install &>/tmp/roboshop.log
 
-echo -e "\e[36Installing Mongodb Client\e[0m"
+echo -e "\e[36mInstalling Mongodb Client\e[0m"
 yum install mongodb-org-shell -y &>/tmp/roboshop.log
 
 echo -e "\e[36mLoad catalogue schema\e[0m"

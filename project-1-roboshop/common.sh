@@ -65,20 +65,20 @@ func_apppreq
 
 func_java() {
    echo -e "\e[36mstarting ${component} servive\e[0m"
-  cp ${component}.service /etc/systemd/system/${component}.service
+  cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
 
  echo -e "\e[36mInstall maven\e[0m"
-  yum install maven -y
+  yum install maven -y &>>${log}
 
 func_apppreq
 
 echo -e "\e[36Build ${component} servive\e[0m"
-  mvn clean package
-  mv target/${component}-1.0.jar ${component}.jar
+  mvn clean package &>>${log}
+  mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
 echo -e "\e[36Install MYSQL client\e[0m"
-  yum install mysql -y
-  mysql -h mysql.rdevopsb72.online -uroot -pRoboShop@1 < /app/schema/${component}.sql
+  yum install mysql -y &>>${log}
+  mysql -h mysql.rdevopsb72.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
 
 func_systemd
 }

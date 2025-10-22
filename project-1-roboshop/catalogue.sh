@@ -29,7 +29,7 @@ unzip /tmp/catalogue.zip >/tmp/roboshop.log
 cd /app
 
 echo -e "\e[36mDownload Nodejs Depandences\e[0m"
-npm install >/tmp/roboshop.log
+npm install >/tmp/roboshop.log >/tmp/roboshop.log
 
 echo -e "\e[36Installing Mongodb Client\e[0m"
 yum install mongodb-org-shell -y >/tmp/roboshop.log

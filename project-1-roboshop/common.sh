@@ -16,6 +16,7 @@ func_apppreq() {
     unzip /tmp/${component}.zip &>>${log}
     cd /app
 
+
     echo -e "\e[36mCreating Application Directory\e[0m"
     mkdir /app &>>${log}
 }

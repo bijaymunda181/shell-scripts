@@ -13,7 +13,7 @@ yum install nodejs -y &>/tmp/roboshop.log
 echo -e "\e[36mCreating Roboshop user\e[0m"
 useradd roboshop &>/tmp/roboshop.log
 
-echo -e "\e[36Removing the old content\e[0m"
+echo -e "\e[36mRemoving the old content\e[0m"
 rm -rf /app &>/tmp/roboshop.log
 
 echo -e "\e[36mCreating Application Directory\e[0m"

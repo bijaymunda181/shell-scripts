@@ -85,7 +85,7 @@ func_systemd
 
 func_python() {
 echo -e "\e[36mBuild ${component} service\e[0m"
-yum install python36 gcc python3-devel -y
+yum install python36 gcc python3-devel -y &>>${log}
 
 func_apppreq
 

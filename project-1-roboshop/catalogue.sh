@@ -19,7 +19,7 @@ rm -rf /app $>/tmp/roboshop.log
 echo -e "\e[36mCreating Application Directory\e[0m"
 mkdir /app $>/tmp/roboshop.log
 
-echo -e "\e[36m\e Downloading Application Content[0m"
+echo -e "\e[36mDownloading Application Content\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip $>/tmp/roboshop.log
 
 

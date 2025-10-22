@@ -19,7 +19,7 @@ rm -rf /app $>/tmp/roboshop.log
 echo -e "\e[36mCreating Application Directory\e[0m"
 mkdir /app $>/tmp/roboshop.log
 
-echo -e "\e[36m\eDownloading Application Content[0m"
+echo -e "\e[36m\e Downloading Application Content[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip $>/tmp/roboshop.log
 
 
@@ -29,7 +29,7 @@ unzip /tmp/catalogue.zip $>/tmp/roboshop.log
 cd /app
 
 echo -e "\e[36mDownload Nodejs Depandences\e[0m"
-npm install $>/tmp/roboshop.log $>/tmp/roboshop.log
+npm install $>/tmp/roboshop.log
 
 echo -e "\e[36Installing Mongodb Client\e[0m"
 yum install mongodb-org-shell -y $>/tmp/roboshop.log

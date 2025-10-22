@@ -2,7 +2,7 @@ echo -e "\e[36mCreating catalog service file\e[0m"
 cp catalogue.service /etc/systemd/system/catalogue.service $>/tmp/roboshop.log
 
 echo -e "\e[36mCreating Mongodb repo\e[0m"
-cp mongo.repo /etc/yum.repos.d/mongo.repo$>/tmp/roboshop.log
+cp mongo.repo /etc/yum.repos.d/mongo.repo $>/tmp/roboshop.log
 
 echo -e "\e[36mInstall nodejs Repo\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash $>/tmp/roboshop.log
@@ -11,7 +11,7 @@ echo -e "\e[36mInstalling Nodejs\e[0m"
 yum install nodejs -y $>/tmp/roboshop.log
 
 echo -e "\e[36mCreating Roboshop user\e[0m"
-useradd  $>/tmp/roboshop.log
+useradd roboshop $>/tmp/roboshop.log
 
 echo -e "\e[36Removing the old content\e[0m"
 rm -rf /app $>/tmp/roboshop.log

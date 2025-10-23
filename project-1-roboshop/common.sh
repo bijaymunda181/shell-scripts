@@ -30,6 +30,7 @@ func_apppreq() {
 
     echo -e "\e[36mCreating Application Directory\e[0m"
     mkdir /app &>>${log}
+    func_exit_status
 }
 
 func_systemd() {
@@ -105,7 +106,6 @@ func_apppreq
 
 echo -e "\e[36mBuild ${component} servive\e[0m"
   mvn clean package &>>${log}
-  func_exit_status
   mv target/${component}-1.0.jar ${component}.jar &>>${log}
   func_exit_status
 

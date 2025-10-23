@@ -4,7 +4,7 @@
 greeting() {
   echo Hellow, Good Morning
   echo Welcome to devops Traning
-  exit 10
+  return
   echo Good to Have you Hare
 }
 greeting

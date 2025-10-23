@@ -74,7 +74,7 @@ func_apppreq
   echo -e "\e[36mDownload Nodejs Depandences\e[0m"
   npm install &>>${log}
 
-func_schema-setup
+func_schema_setup
 
   func_systemd
 

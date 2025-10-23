@@ -7,3 +7,8 @@ while [ $a -gt 0 ]; do
   echo Hellow
   a=$((a-1))
   done
+
+  # Based on Inputs
+  for comp in frontend catalogue user ; do
+    echo installing compnent - $comp
+    done

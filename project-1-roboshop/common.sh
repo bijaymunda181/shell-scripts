@@ -31,9 +31,7 @@ func_apppreq() {
     cd /app
 
 
-    echo -e "\e[36mCreating Application Directory\e[0m"
-    mkdir /app &>>${log}
-    func_exit_status
+
 }
 
 func_systemd() {

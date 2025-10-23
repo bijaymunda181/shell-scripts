@@ -122,7 +122,7 @@ func_exit_status
 
 func_apppreq
 
-echo -e "\e[36mBuild ${component} service\e[0m"
+echo -e "\e[36mBuild ${component} Reqirment\e[0m"
 pip3.6 install -r requirements.txt &>>${log}
 func_exit_status
 

@@ -6,10 +6,8 @@ func_apppreq() {
     cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
 
     echo -e "\e[36mCreating Roboshop user\e[0m"
-    id roboshop
-    if [ $? -eq 0 ]; then
     useradd roboshop &>>${log}
-    fi
+
     func_exit_status
 
     echo -e "\e[36mRemoving the old content\e[0m"

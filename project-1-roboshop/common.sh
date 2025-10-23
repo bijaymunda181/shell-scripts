@@ -4,6 +4,7 @@ func_apppreq() {
 
     echo -e "\e[36mCreating ${component} service file\e[0m"
     cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
+    func_exit_status
 
     echo -e "\e[36mCreating Roboshop user\e[0m"
     useradd roboshop &>>${log}
@@ -12,9 +13,11 @@ func_apppreq() {
 
     echo -e "\e[36mRemoving the old content\e[0m"
     rm -rf /app &>>${log}
+    func_exit_status
 
     echo -e "\e[36mCreating Application Directory\e[0m"
     mkdir /app &>>${log}
+    func_exit_status
 
     echo -e "\e[36mDownloading Application Content\e[0m"
     curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip &>>${log}

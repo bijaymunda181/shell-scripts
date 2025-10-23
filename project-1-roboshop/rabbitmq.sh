@@ -1,4 +1,4 @@
-rabbitmq_app_password=$1
+rabbitmq_app_password=$1 #password should not be hardcoded, thats why we use special varibales.
 if [ -z "${rabbitmq_app_password}" ]; then
   echo Input rabbitmq appUser Password is Missing
   exit 2
@@ -9,5 +9,8 @@ curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/sc
 yum install rabbitmq-server -y
 systemctl enable rabbitmq-server
 systemctl start rabbitmq-server
-rabbitmqctl add_user roboshop ${rabbitmq_app_password}
+rabbitmqctl add_user roboshop ${rabbitmq_app_password} # password should not be hardcoded.
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
+
+#when we run the scripts like bash rabbitmq.sh the password should be there after the file name.
+# EXAMPLE:-  bash rabbitmq.sh <password>.

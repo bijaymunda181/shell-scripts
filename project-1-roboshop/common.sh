@@ -114,7 +114,7 @@ func_systemd
 }
 
 
-}
+
 
 func_exit_status() {
   if [ $? -eq 0 ]; then

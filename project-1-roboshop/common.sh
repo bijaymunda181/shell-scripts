@@ -34,6 +34,27 @@ func_systemd() {
     systemctl restart ${component} &>>${log}
 }
 
+func_schema_setup() {
+  if [ ${"schema_setup"} == "mongodb"]; then
+  echo -e "\e[36mInstalling Mongodb Client\e[0m"
+  yum install mongodb-org-shell -y &>>${log}
+
+  echo -e "\e[36mLoad ${component} schema\e[0m"
+  mongo --host mongodb.rdevopsb72.online </app/schema/${component}.js &>>${log}
+ fi
+
+   echo -e "\e[36mInstall MYSQL client\e[0m"
+   if [ "${schema_type}" == "mysql"]; then
+     echo -e "\e[36mInstall MYSQL Client\e[0m"
+     yum install mysql -y &>>${log}
+
+     echo -e "\e[36mLoad user schema\e[0m"
+     mysql -h mysql.rdevopsb72.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
+ fi
+ }
+
+
+
 func_nodejs() {
   log=/tmp/roboshop.log # Its a variable
 
@@ -53,11 +74,7 @@ func_apppreq
   echo -e "\e[36mDownload Nodejs Depandences\e[0m"
   npm install &>>${log}
 
-  echo -e "\e[36mInstalling Mongodb Client\e[0m"
-  yum install mongodb-org-shell -y &>>${log}
-
-  echo -e "\e[36mLoad ${component} schema\e[0m"
-  mongo --host mongodb.rdevopsb72.online </app/schema/${component}.js &>>${log}
+func_schema-setup
 
   func_systemd
 
@@ -76,9 +93,7 @@ echo -e "\e[36mBuild ${component} servive\e[0m"
   mvn clean package &>>${log}
   mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
-echo -e "\e[36mInstall MYSQL client\e[0m"
-  yum install mysql -y &>>${log}
-  mysql -h mysql.rdevopsb72.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
+func_shema-setup
 
 func_systemd
 }

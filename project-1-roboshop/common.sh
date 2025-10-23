@@ -9,6 +9,7 @@ func_apppreq() {
     id roboshop
     if [ $? -eq 0 ]; then
     useradd roboshop &>>${log}
+    fi
     func_exit_status
 
     echo -e "\e[36mRemoving the old content\e[0m"

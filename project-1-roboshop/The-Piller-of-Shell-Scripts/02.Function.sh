@@ -6,4 +6,4 @@ greeting() {
   echo Welcome to devops Traning
   echo Good to Have you Hare
 }
-$?
+echo function Exit status - $?

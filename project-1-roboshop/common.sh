@@ -8,7 +8,7 @@ func_apppreq() {
 
     echo -e "\e[36mCreating Roboshop user\e[0m"
     id roboshop &>>${log}
-    if [ $? -nq 0 ]; then
+    if [ $? -ne 0 ]; then
     useradd roboshop &>>${log}
     fi
 

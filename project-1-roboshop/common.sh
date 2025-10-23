@@ -35,7 +35,7 @@ func_systemd() {
 }
 
 func_schema_setup() {
-  if [ "${schema_setup}" == "mongodb"]; then
+  if [ "${schema_setup}" == "mongodb" ]; then
   echo -e "\e[36mInstalling Mongodb Client\e[0m"
   yum install mongodb-org-shell -y &>>${log}
 
@@ -44,7 +44,7 @@ func_schema_setup() {
  fi
 
    echo -e "\e[36mInstall MYSQL client\e[0m"
-   if [ "${schema_type}" == "mysql"]; then
+   if [ "${schema_type}" == "mysql" ]; then
      echo -e "\e[36mInstall MYSQL Client\e[0m"
      yum install mysql -y &>>${log}
 

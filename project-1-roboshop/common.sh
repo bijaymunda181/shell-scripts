@@ -113,7 +113,6 @@ func_systemd
 }
 
 func_exit_status() {
-  echo $?
   if [ $? -eq 0 ]; then
     echo -e "\e[32m Sucess \e[0m"
     else

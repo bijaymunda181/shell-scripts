@@ -13,5 +13,5 @@ DATE=$(date)
 
 ## Arithmetic substitution
 ADD=$((2+2))
-echo ADD od 2+2 = $ADD
+echo ADD of 2+2 = $ADD
 

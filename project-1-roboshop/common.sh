@@ -95,7 +95,7 @@ echo -e "\e[36mBuild ${component} servive\e[0m"
   mvn clean package &>>${log}
   mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
-func_shema-setup
+func_shema_setup
 
 func_systemd
 }

@@ -7,7 +7,10 @@ func_apppreq() {
     func_exit_status
 
     echo -e "\e[36mCreating Roboshop user\e[0m"
+    id roboshop &>>${log}
+    if [ $? -nq 0 ]; then
     useradd roboshop &>>${log}
+    fi
 
     func_exit_status
 

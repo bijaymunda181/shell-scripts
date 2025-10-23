@@ -7,6 +7,7 @@ func_apppreq() {
 
     echo -e "\e[36mCreating Roboshop user\e[0m"
     useradd roboshop &>>${log}
+    func_exit_status
 
     echo -e "\e[36mRemoving the old content\e[0m"
     rm -rf /app &>>${log}
@@ -109,4 +110,11 @@ pip3.6 install -r requirements.txt &>>${log}
 
 func_systemd
 
+}
+
+func_exit_status() {
+  if [ $? -eq 0 ]; then
+    echo -e "\e[32m Sucess \e[0m"
+    else
+      echo -e "\e[31mFAILURE[0m"
 }

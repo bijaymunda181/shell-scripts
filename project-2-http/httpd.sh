@@ -14,9 +14,15 @@ echo -e "\e[36copy webpage content\e[0m"
 echo -e "\e[36mStarting httpd Service\e[0m"
 systemctl enable httpd &>>${log}
 systemctl start httpd &>>${log}
-func_exit_status
 
-func_http_stats
+echo -e "\e[36m service status\e[0m"
+if systemctl is-active --quiet httpd; then
+    echo "HTTPD Service is Running - OK"
+else
+    echo "HTTPD Service is NOT running - FAILED"
+    exit 1   # Stop script if service is not running
+fi
+
 
 
 

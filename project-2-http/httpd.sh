@@ -16,6 +16,8 @@ systemctl enable httpd &>>${log}
 systemctl start httpd &>>${log}
 func_exit_status
 
+func_http_stats
+
 
 
 

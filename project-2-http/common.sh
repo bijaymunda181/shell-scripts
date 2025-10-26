@@ -16,7 +16,3 @@ func_http_stats() {
  fi
 }
 
-func_ssystemd() {
-  systemctl ebanle httpd
-  systemctl start httpd
-}

@@ -9,10 +9,8 @@ func_exit_status() {
 }
 
 fucc_http_stats() {
-  systemctl status httpd &>>${log}
-  if [ $? -eq 0 ]; then
-    echo -e "\e[32mActive\e[0m"
-    else
-      echo -e "\e[31mInactive\e[0m"
-      fi
-}
+ if systemctl is-active --quiet httpd; then
+     echo "HTTPD Service is Running"
+ else
+     echo "HTTPD Service is Not Running"
+ fi

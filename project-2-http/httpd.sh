@@ -15,7 +15,7 @@ systemctl enable httpd &>>${log}
 systemctl start httpd &>>${log}
 func_exit_status
 
-echo -e "\e[36m service status\e[0m"
+echo -e "\e[36mservice status\e[0m"
 if systemctl is-active --quiet httpd; then
     echo -e "\e[32mHTTPD Service is Running - OK\e[0m"
 else

@@ -9,11 +9,5 @@ func_exit_status() {
       fi
 }
 
-func_http_stats() {
- if systemctl is-active --quiet httpd; then
-     echo "HTTPD Service is Running"
- else
-     echo "HTTPD Service is Not Running"
- fi
-}
+
 

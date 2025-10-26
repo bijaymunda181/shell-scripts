@@ -12,13 +12,6 @@ systemctl enable httpd &>>${log}
 systemctl start httpd &>>${log}
 func_exit_status
 
-if [ -f "$WEBFILE" ]; then
-    cp $WEBFILE $DEST
-    echo "HTML file copied to $DEST"
-else
-    echo "ERROR: $WEBFILE not found! Please place it in the same directory as the script."
-    exit 1
-fi
 
 
 

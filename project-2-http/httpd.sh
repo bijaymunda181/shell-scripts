@@ -6,7 +6,7 @@ echo -e "\e[36m Installing http service\e[0m"
 yum install httpd -y &>>${log}
 func_exit_status
 
-echo -e "\e[36copy webpage content\e[0m"
+echo -e "\e[36mcopy webpage content\e[0m"
   cp index.html /var/www/html/index.html &>>${log}
   func_exit_status
 

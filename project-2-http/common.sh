@@ -1,3 +1,5 @@
+log=/tmp/http.log
+
 func_exit_status() {
   if [ $? -eq 0 ]; then
     echo -e "\e[32mSuccess\e[0m"
@@ -7,7 +9,7 @@ func_exit_status() {
 }
 
 fucc_http_stats() {
-  systemctl status httpd
+  systemctl status httpd &>>${log}
   if [ $? -eq 0 ]; then
     echo -e "\e[32mActive\e[0m"
     else

@@ -15,3 +15,8 @@ func_http_stats() {
      echo "HTTPD Service is Not Running"
  fi
 }
+
+func_ssystemd() {
+  systemct ebanle httpd
+  systemctl start httpd
+}

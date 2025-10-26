@@ -12,8 +12,7 @@ echo -e "\e[36copy webpage content\e[0m"
   func_exit_status
 
 echo -e "\e[36mStarting httpd Service\e[0m"
-systemctl enable httpd &>>${log}
-systemctl start httpd &>>${log}
+func_ssystemd
 
 echo -e "\e[36m service status\e[0m"
 if systemctl is-active --quiet httpd; then

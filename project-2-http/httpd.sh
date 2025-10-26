@@ -1,6 +1,5 @@
 log=/tmp/http.log
 source common.sh
-source index.html
 
 
 echo -e "\e[36m Installing http service\e[0m"

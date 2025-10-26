@@ -17,6 +17,6 @@ func_http_stats() {
 }
 
 func_ssystemd() {
-  systemct ebanle httpd
+  systemctl ebanle httpd
   systemctl start httpd
 }

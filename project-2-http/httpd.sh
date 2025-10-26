@@ -1,5 +1,5 @@
 log=/tmp/http.log
-source common.sh
+source non-fun-reqire.sh
 
 
 echo -e "\e[36m Installing http service\e[0m"

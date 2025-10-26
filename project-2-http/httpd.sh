@@ -17,9 +17,9 @@ systemctl start httpd &>>${log}
 
 echo -e "\e[36m service status\e[0m"
 if systemctl is-active --quiet httpd; then
-    echo "HTTPD Service is Running - OK"
+    echo -e "\e[32mHTTPD Service is Running - OK\e[0m"
 else
-    echo "HTTPD Service is NOT running - FAILED"
+    echo "\e[31mHTTPD Service is NOT running - FAILED\e[0m"
     exit 1   # Stop script if service is not running
 fi
 

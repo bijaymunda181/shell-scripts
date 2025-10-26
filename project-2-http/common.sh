@@ -6,3 +6,11 @@ func_exit_status() {
       fi
 }
 
+fucc_http_stats() {
+  systemctl status httpd
+  if [ $? -eq 0 ]; then
+    echo -e "\e[32mActive\e[0m"
+    else
+      echo -e "\e[31mInactive\e[0m"
+      fi
+}

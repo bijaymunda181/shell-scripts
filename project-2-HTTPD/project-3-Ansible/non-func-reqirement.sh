@@ -12,5 +12,6 @@ func_installed_status() {
     echo -e "\e[32mINSTALLED\e[0m"
     else
       echo -e "\e[31FAILURE\e[0m"
+  fi
 
 }

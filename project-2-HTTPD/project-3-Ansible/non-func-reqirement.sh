@@ -1,4 +1,6 @@
-func_exit_status() {
+log=/tmp/ansible.log
+
+ func_exit_status() {
   if [ $? -eq 0 ]; then
     echo -e "\e[32mSUCESS\e[0m"
     else
@@ -7,7 +9,7 @@ func_exit_status() {
 }
 
 func_installed_status() {
-  ansible --version
+  ansible --version &>>${log}
   if [ $? -eq 0 ]; then
     echo -e "\e[32mINSTALLED\e[0m"
     else

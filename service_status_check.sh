@@ -6,17 +6,17 @@ SERVICE="nginx"
 # Check if the service is active
 if systemctl is-active --quiet $SERVICE
 then
-echo "$SERVICE is running."
+echo -e "\e[32m$SERVICE is running.\e[0m"
 else
-echo "$SERVICE is not running. Restarting..."
+echo -e "\e[32m$SERVICE is not running. Restarting...\e[0m"
 systemctl restart $SERVICE
 
     # Check if restart was successful
     if systemctl is-active --quiet $SERVICE
     then
-        echo "$SERVICE restarted successfully!"
+        echo -e "\e[32m$SERVICE restarted successfully!\[0m"
     else
-        echo "Failed to restart $SERVICE."
+        echo -e "\e[31mFailed to restart $SERVICE.\e[0m"
     fi
 fi
 

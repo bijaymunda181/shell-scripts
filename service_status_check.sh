@@ -14,7 +14,7 @@ systemctl restart $SERVICE
     # Check if restart was successful
     if systemctl is-active --quiet $SERVICE
     then
-        echo -e "\e[32m$SERVICE restarted successfully!\[0m"
+        echo -e "\e[32m$SERVICE restarted successfully!\e[0m"
     else
         echo -e "\e[31mFailed to restart $SERVICE.\e[0m"
     fi

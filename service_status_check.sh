@@ -8,7 +8,7 @@ if systemctl is-active --quiet $SERVICE
 then
 echo -e "\e[32m$SERVICE is running.\e[0m"
 else
-echo -e "\e[32m$SERVICE is not running. Restarting...\e[0m"
+echo -e "\e[36m$SERVICE is not running. Restarting...\e[0m"
 systemctl restart $SERVICE
 
     # Check if restart was successful

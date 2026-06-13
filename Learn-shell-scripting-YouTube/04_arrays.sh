@@ -16,3 +16,7 @@ echo "${myArrays[@]}"
 
 #Print Array length
 echo "${#myArrays[@]}"
+
+# Print Range of values from Array
+
+echo "value from index 1-3 ${myArrays[*]:1:3}"

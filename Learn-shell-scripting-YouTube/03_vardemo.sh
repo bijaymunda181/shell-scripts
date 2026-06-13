@@ -7,6 +7,9 @@ echo "my name is  $name and my age is $age"
 #or
 echo "my name is ${name} and my age is ${age}"
 
+name="munda"
+echo " my new name is $name"
+
 
 
 # Print the output of any linux command.

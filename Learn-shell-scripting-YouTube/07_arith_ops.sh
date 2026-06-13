@@ -5,3 +5,5 @@ y=20
 
 let sum=$x+$y
 echo "sum of two number are $sum"
+
+echo "multiple of two numbers are $(($x*$y))"

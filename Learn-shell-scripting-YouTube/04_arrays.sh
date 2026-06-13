@@ -27,5 +27,5 @@ myArrays+=(New 10 20 cool)
 echo "all values in my array is ${myArrays[*]}"
 
 ##Editing array
-myArrays[2]=sumit
+myArrays[1]=sumit
 echo "all value in my array is ${myArrays[*]}"

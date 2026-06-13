@@ -5,4 +5,4 @@
 
 name=(Bijay Amit 1 3.6 "Bijay Munda")
 
-echo "${name}[0]"
+echo "${name}"

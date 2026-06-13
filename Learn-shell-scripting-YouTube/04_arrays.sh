@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Arrays
+##Arrays
 #An Array is a varible that can store multiple values insted of just one value.
 
 myArrays=(Bijay Amit 1 3.6 "Bijay Munda")
@@ -10,19 +10,17 @@ echo "${myArrays[3]}"
 echo "${myArrays[2]}"
 echo "${myArrays[5]}"
 
-#Print all variables
+##Print all variables
 echo "${myArrays[@]}"
 
 
-#Print Array length
+##Print Array length
 echo "${#myArrays[@]}"
 
-# Print Range of values from Array
-
+##Print Range of values from Array
 echo "value from index 1-3 ${myArrays[*]:1:3}"
 
-# Updating Array
-
+##Updating Array
 myArrays+=(New 10 20 cool)
 echo "all values in my array is ${myArrays[*]}"
 

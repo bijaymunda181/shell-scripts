@@ -29,3 +29,7 @@ echo "all values in my array is ${myArrays[*]}"
 ##Editing array
 myArrays[1]=sumit
 echo "all value in my array is = ${myArrays[*]}"
+
+## Deleting a value from array
+unset myArrays[0]
+echo "all value in my array is = ${myArrays[*]}"

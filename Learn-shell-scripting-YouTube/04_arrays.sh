@@ -9,3 +9,5 @@ echo "${myArrays[0]}"
 echo "${myArrays[3]}"
 echo "${myArrays[2]}"
 echo "${myArrays[5]}"
+
+echo "${myArrays[@]}"

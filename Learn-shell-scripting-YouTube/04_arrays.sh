@@ -24,3 +24,4 @@ echo "value from index 1-3 ${myArrays[*]:1:3}"
 # Updating Array
 
 myArrays+=(New 10 20 cool)
+echo "all values in my array is ${myArrays[*]}"

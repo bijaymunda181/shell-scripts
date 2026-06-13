@@ -10,4 +10,9 @@ echo "${myArrays[3]}"
 echo "${myArrays[2]}"
 echo "${myArrays[5]}"
 
+#Print all variables
 echo "${myArrays[@]}"
+
+
+#Print Array length
+echo "${#myArrays[@]}"

@@ -8,3 +8,4 @@ done
 for name in RAju Raja Bijay Kalu Lalu Bhalu
 do
   echo "The name is $name"
+done

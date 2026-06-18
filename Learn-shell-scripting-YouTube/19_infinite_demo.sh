@@ -2,6 +2,6 @@
 
 while true
 do
-  echo"Kya RE Chokre....."
+  echo "Kya RE Chokre....."
 sleep 3s
 done

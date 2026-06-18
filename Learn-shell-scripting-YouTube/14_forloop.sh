@@ -5,6 +5,7 @@ do
   echo "The number is $num"
 done
 
+
 for name in RAju Raja Bijay Kalu Lalu Bhalu
 do
   echo "The name is $name"

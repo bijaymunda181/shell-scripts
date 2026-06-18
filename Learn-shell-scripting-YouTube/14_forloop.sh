@@ -10,3 +10,9 @@ for name in RAju Raja Bijay Kalu Lalu Bhalu
 do
   echo "The name is $name"
 done
+
+
+for i in {1..20}
+do
+  echo "$i"
+ done

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-function myfun {
-  echo "Hello Buddy!!!!"
+greet() {
+  echo "Hello Bijay"
 }
 
-myfun
+greet

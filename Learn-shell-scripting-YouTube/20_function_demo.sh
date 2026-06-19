@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function myfun{
+function myfun {
   echo "Hello Buddy!!!!"
 }
 

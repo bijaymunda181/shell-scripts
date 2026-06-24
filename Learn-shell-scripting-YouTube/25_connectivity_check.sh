@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "which site you want to check?" site
+read -p "which site you want to check? " site
 
 ping -C 1 $site
 

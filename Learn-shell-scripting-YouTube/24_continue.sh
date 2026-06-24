@@ -12,4 +12,5 @@ do
     continue
   fi
   echo "Number is $i"
+  sleep 2s
 done

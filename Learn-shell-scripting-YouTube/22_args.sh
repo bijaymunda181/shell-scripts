@@ -5,3 +5,8 @@ echo "second argument is $2"
 
 echo "No of argument are $#"
 echo "All the arguments are $@"
+
+for arg  in $@
+do
+  echo "Argument is $arg"
+done

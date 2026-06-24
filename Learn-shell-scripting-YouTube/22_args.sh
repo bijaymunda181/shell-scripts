@@ -1,4 +1,9 @@
 #!/bin/bash
+
+if [ $# -eq 0 ]; then
+  echo "kindly provide atleast one argument "
+fi
+
 #Accessing the arguments
 echo "First argument is $1"
 echo "second argument is $2"

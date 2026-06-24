@@ -2,6 +2,7 @@
 
 if [ $# -eq 0 ]; then
   echo "kindly provide atleast one argument "
+  exit 1
 fi
 
 #Accessing the arguments
